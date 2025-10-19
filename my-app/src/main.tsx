@@ -1,9 +1,10 @@
-import React from "react";
+//import React from "react";
 import ReactDOM from "react-dom/client";
-import TodayPrime from "./TodayPrime.tsx";
-
+import { BrowserRouter } from "react-router-dom";
+//import TodayPrime from "./pages/TodayPrime.tsx";
+import App from "./App";
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <TodayPrime />
-  </React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );

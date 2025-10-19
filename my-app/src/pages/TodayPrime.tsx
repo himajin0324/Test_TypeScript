@@ -1,4 +1,4 @@
-import classes from "./TodayPrime.module.css";
+import classes from "./css/TodayPrime.module.css";
 
 
 export default function TodayPrime(){
@@ -22,6 +22,7 @@ export default function TodayPrime(){
                     これは{place}番目の素数です
                 </p>
             </div>
+
         </div>
 
     );
