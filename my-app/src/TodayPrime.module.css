@@ -1,0 +1,85 @@
+body {
+    
+    background-color: gold;
+}
+.container {
+    border: solid 2px rgb(122, 170, 9);
+    background-color: #7ef385;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 8px;
+    display: grid;
+    justify-content: space-around;
+}
+/*素数のフォント*/
+.number {
+    color: rgb(2, 60, 47);
+    font-family: "Courier New","Arial";/*Courier Newが使用できない場合にArial*/
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    animation: NumberAnimation;
+    animation-duration: 5s;
+}
+@keyframes NumberAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(2.0);
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+.basictext {
+    color: Black;
+    font-family: "ヒラギノ角ゴシック ProN", "游ゴシック Medium", Arial;
+    font-size: 20px;
+    text-align: center;
+}
+.title {
+    margin: 10;
+    font-family: "游明朝", "Arial";
+    font-style: italic;
+    color: rgb(86, 42, 72);
+    font-weight: 900;
+    animation: TitleAnimation;
+    animation-duration : 4s;
+    transform: translateX(-5px);
+    background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+    );
+}
+@keyframes TitleAnimation {
+    0% {
+    transform: translateX(180px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(-5px);
+    }
+    40%,100% {
+    opacity: 1;
+    }
+}
+.button {
+    background-color: #ddd;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+.button:hover {
+    background-color: #aaa;
+    color: #fff;
+    cursor: pointer;
+}
