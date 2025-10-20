@@ -1,20 +1,11 @@
 body {
-    background-color: yellowgreen;
+    background-color: rgb(201, 201, 201);
 }
-nav {
+
+.profile {
+    background-color: aliceblue;
+    border-style: dashed;
+    border-color: gray;
     width: 100%;
-    height: 70px;
-    padding-top: 5px;
-    background-color: rgb(131, 177, 131);
-}
-.menuList {
-    list-style: none;
-}
-.menu {
-    display: flex;
-}
-.menuLink {
-    font-size: 20px;
-    display: block;
-    margin-right: 40px;
+    height: 100px;
 }
