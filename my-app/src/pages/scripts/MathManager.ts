@@ -1,5 +1,7 @@
 //数学的処理を行う関数をまとめたスクリプト
-
+//素数を生成
+//Math.random()は小数の乱数を生成するので10001の積をとることで~10000までの素数を生成している
+//いつか桁数も調節できるようにしたい
 export const MakePrime = () => {
     let n = Math.floor(Math.random() * 10001);
     while (!isPrime(n))

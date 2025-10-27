@@ -10,8 +10,9 @@
 /*素数のフォント*/
 .number {
     color: rgb(2, 60, 47);
-    font-family: "Courier New","Arial";/*Courier Newが使用できない場合にArial*/
+    font-family: "DotGothic16","Arial";/*DotGothicが使用できない場合にArial*/
     font-size: 100px;
+    letter-spacing: 10.0px;/*文字間の幅*/
     font-weight: bold;
     text-align: center;
     animation: NumberAnimation;
@@ -32,16 +33,19 @@
 }
 .basictext {
     color: Black;
-    font-family: "ヒラギノ角ゴシック ProN", "游ゴシック Medium", Arial;
+    font-family: "DotGothic16", "ヒラギノ角ゴシック ProN", "游ゴシック Medium", Arial;
     font-size: 20px;
     text-align: center;
 }
 .title {
-    margin: 10;
-    font-family: "游明朝", "Arial";
-    font-style: italic;
-    color: rgb(86, 42, 72);
+    color: hsl(0, 0%, 100%);
+    font-family: "DotGothic16", sans-serif;
+    font-size: 40px;
     font-weight: 900;
+    left: 196px;
+    letter-spacing: 1.60px;
+    line-height: normal;
+    text-align: center;
     animation: TitleAnimation;
     animation-duration : 4s;
     transform: translateX(-5px);

@@ -1,6 +1,6 @@
-//import classes from "./css/GetPrimeForm.module.css";
+import classes from "./css/GetPrimeForm.module.css";
 import { useRef, useState } from "react";
-import { isPrime, fact, get_Prime_Place } from "./MathManager";
+import { isPrime, fact, get_Prime_Place } from "./scripts/MathManager.ts";
 
 
 export default function GetPrimeForm(){
@@ -27,10 +27,10 @@ export default function GetPrimeForm(){
             </div>);
         }
     }
-    return(<div>
-        <input type="text" ref={inputRef}/>
-        <button onClick={handleClick}>素数判定</button>
-        <div>
+    return(<div className={classes.container}>
+        <input type="text" ref={inputRef} className={classes.inputBox}/>
+        <button onClick={handleClick} className={classes.button}>素数判定</button>
+        <div className={classes.concBox}>
             {result}  
         </div>
     </div>);

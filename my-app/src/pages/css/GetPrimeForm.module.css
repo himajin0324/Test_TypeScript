@@ -1,0 +1,48 @@
+div {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+position: https://saruwakakun.com/html-css/basic/relative-absolute-fixed
+*/
+.container{
+    position: relative;
+    background-color: bisque;
+    width: 90%;
+    height: 300px;
+    text-align: center;
+}
+.button {
+    font-family: "DotGothic16", sans-serif;    
+    text-align: center; 
+    background-color: #d9d9d9bd;
+    border-radius: 24px;
+    box-shadow: 5px 5px 10.8px 2px #00000080;
+    height: 50px;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    position: relative;
+
+}
+.inputBox{
+    font-size: 20px;
+    font-family: "DotGothic16", sans-serif;  
+    text-align: center;
+    background-color: #ffffff;
+    border: 6px solid;
+    border-color: #000000;
+    height: 40px;
+    width: 150px;
+    top: 10px;
+    left: -10px;
+    position: relative;      
+}
+.concBox{
+    position: relative;
+    top: 30px;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 200%;
+    
+}
