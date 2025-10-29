@@ -7,11 +7,16 @@ export default function GetPrimeForm(){
     const inputRef = useRef<HTMLInputElement>(null);
     const [result, setResult] = useState<React.JSX.Element | null>(null);
     const handleClick = () => {
-        //入力値がnull
+        //入力値がnull or NaN（数値以外）
         if (!inputRef.current)return;
         const inputNum = Number(inputRef.current.value);
         //入力値がNaN（数値以外）
-        if (isNaN(inputNum))return;
+        if (isNaN(inputNum)){
+            setResult(<div>
+                値を入力してください。(-_-メ)
+            </div>);
+            return;
+        }
         //判定は1回のみ
         if (LoadNum(label.pre_number) != inputNum)
         {
