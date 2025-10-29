@@ -32,11 +32,16 @@ export default function GetPrimeForm(){
         }
 
     }
-    return(<div className={classes.container}>
-        <input type="text" ref={inputRef} className={classes.inputBox}/>
-        <button onClick={handleClick} className={classes.button}>素数判定</button>
-        <div className={classes.concBox}>
-            {result}  
+
+    return(<div>
+        <center><h1>素数チェッカー</h1></center>
+        <div className={classes.container}>
+            <input type="text" ref={inputRef} className={classes.inputBox}/>
+            <button onClick={handleClick} className={classes.button}>素数判定</button>
+            <div className={classes.concBox}>
+                {result}  
+            </div>
         </div>
-    </div>);
+    </div>
+    );
 }

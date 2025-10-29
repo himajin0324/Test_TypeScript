@@ -8,7 +8,7 @@ position: https://saruwakakun.com/html-css/basic/relative-absolute-fixed
 */
 .container{
     position: relative;
-    background-color: bisque;
+    background-color: rgb(176, 176, 176);
     width: 90%;
     height: 300px;
     text-align: center;
@@ -23,6 +23,7 @@ position: https://saruwakakun.com/html-css/basic/relative-absolute-fixed
     width: 100px;
     top: 10px;
     left: 10px;
+    margin-top: 50px;
     position: relative;
 
 }

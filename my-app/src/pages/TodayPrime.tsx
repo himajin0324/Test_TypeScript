@@ -1,10 +1,14 @@
 import classes from "./css/TodayPrime.module.css";
 import { /*MakePrime,*/ get_Prime_Place } from "./scripts/MathManager.ts";
-import { SetNum } from "./scripts/DataManager.ts";
+import { label, SetNum, removeStorage } from "./scripts/DataManager.ts";
 
 export default function TodayPrime(){
     const num = SetNum();
     const place = get_Prime_Place(num);
+    const resetParameter = () => {
+        removeStorage(label.date_stored);
+        window.location.reload();
+    }
     return (
         <div>
             <title>あなたの今日の素数α版</title>
@@ -21,6 +25,8 @@ export default function TodayPrime(){
                     おめでとうございます！<br></br>
                     これは{place}番目の素数です
                 </p>
+                <button onClick={resetParameter}>再取得(デバッグ用)</button>
+
             </div>
 
         </div>

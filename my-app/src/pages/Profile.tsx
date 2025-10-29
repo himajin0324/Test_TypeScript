@@ -5,7 +5,6 @@ import { Accordion } from "./scripts/Accordion.tsx";
 export default function Profile(){
     return(<div className={classes.body}>
         <h1>マイプロフィール</h1>
-        <br></br>
         <div className={classes.profileContainer}>
             <img className={classes.profImg} src={profileImg} alt="profImg" />
             <div className={classes.profText}>
@@ -17,11 +16,11 @@ export default function Profile(){
                     学歴：岡山大学工学部所属<br/>
                     サイズ：<br/>
                     資格検定：普通自動二輪免許小型AT限定/実用数学技能検定準1級（2022年10月取得）/TOEIC 735点（2024年2月取得）<br/>
-                    好きな食べ物：トマト/グミ/チョコ<br/>
+                    好きな食べ物：トマト🍅/グミ/チョコ<br/>
                     嫌いな食べ物：無し<br/>
                     趣味：
                     <Accordion>
-                        ああ
+                        釣り🎣/キャンプ⛺/バイク🏍/ラーメン🍜/旅行👜/ずとまよ/音ゲー/同人誌を買うこと
                     </Accordion><br/>
                     Link：
                 </div>

@@ -2,18 +2,19 @@
 import { MakePrime } from "./MathManager.ts";
 //データ保存用
 export const label = {
-    number: "Number", 
+    prime: "Number", 
     today: "TodayDate", 
     date_stored: "Date_Stored", 
     pre_number: "PreviousNumber"
 };
 //素数を保存するかロードするか
 export const SetNum = () => {
-    const n = LoadNum(label.number);
+    let n = LoadNum(label.prime);
     if (n && getToday() == localStorage.getItem(label.date_stored)) return n;
     else {
-        SaveNum(label.number, MakePrime());
+        SaveNum(label.prime, MakePrime());
         SaveDate(getToday());
+        n = LoadNum(label.prime);
         return n;
     }
 }
@@ -40,6 +41,6 @@ const getToday = () => {
     return year + "-" + month + "-" + day;
 }
 
-const removeStorage = (str:string) => {
+export const removeStorage = (str:string) => {
     localStorage.removeItem(str);
 }
