@@ -1,5 +1,5 @@
 //ブラウザに保存しているデータを管理
-import { MakePrime } from "./MathManager.ts";
+import { makePrime } from "./MathManager.ts";
 //データ保存用
 export const label = {
     prime: "Number", 
@@ -12,7 +12,7 @@ export const SetNum = () => {
     let n = LoadNum(label.prime);
     if (n && getToday() == localStorage.getItem(label.date_stored)) return n;
     else {
-        SaveNum(label.prime, MakePrime());
+        SaveNum(label.prime, makePrime(5));
         SaveDate(getToday());
         n = LoadNum(label.prime);
         return n;

@@ -1,13 +1,26 @@
 //数学的処理を行う関数をまとめたスクリプト
+
 //素数を生成
-//Math.random()は小数の乱数を生成するので10001の積をとることで~10000までの素数を生成している
-//いつか桁数も調節できるようにしたい
-export const MakePrime = () => {
-    let n = Math.floor(Math.random() * 10001);
+//digit桁まで
+export const makePrime = (digit:number) => {
+    const d = 10**(digit);
+    //floorで小数以下切り捨て
+    let n = Math.floor(Math.random() * d);
     while (!isPrime(n))
     {
-        n = Math.floor(Math.random() * 10001);
+        n = Math.floor(Math.random() * d);
     }
+    return n;
+}
+//引数で指定した因数を持つ値を生成
+export const makeTarget = (arrayFactor:number[]) => {
+    const facts = [...arrayFactor];//jsでは参照渡しなのでコピー
+    let n = 1;
+    while (facts.length > 0){
+        //せいぜい2個までの素因数
+        n *= Number(facts.shift())**(Math.floor(Math.random() * 3));
+    }
+
     return n;
 }
 //素数:true/false
@@ -52,6 +65,7 @@ export const fact = (n:number) => {
         }
     }
     while (array.length > 0){
+        //配列の"先頭"から値を取り出す
         str += String(array.shift());
         if (array.length > 0)str += "×";
     }
