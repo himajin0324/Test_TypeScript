@@ -37,13 +37,20 @@ export default function GetPrimeForm(){
             }
             SaveNum(label.pre_number, inputNum);
         }
-
     }
 
     return(<div>
         <center><h1>素数チェッカー</h1></center>
         <div className={classes.container}>
-            <input type="text" ref={inputRef} className={classes.inputBox}/>
+            <input
+                type="text"
+                ref={inputRef}
+                className={classes.inputBox}
+                onKeyDown={e => {
+                    //Enterキーでも入力OK
+                    if (e.key === "Enter") handleClick();
+                }}
+            />
             <button onClick={handleClick} className={classes.button}>素数判定</button>
             <div className={classes.concBox}>
                 {result}  
