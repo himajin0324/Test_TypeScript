@@ -20,7 +20,7 @@ export default function Profile(){
                     嫌いな食べ物：無し<br/>
                     趣味：
                     <Accordion>
-                        釣り🎣/キャンプ⛺/バイク🏍/ラーメン🍜/旅行👜/ずとまよ/音ゲー/同人誌を買うこと
+                        釣り🎣/キャンプ⛺/バイク🏍/ラーメン🍜/旅行👜/ずとまよ/音ゲー/コミケに行くこと
                     </Accordion><br/>
                     Link：
                 </div>
